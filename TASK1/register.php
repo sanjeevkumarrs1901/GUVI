@@ -15,8 +15,8 @@
     }
     else
     {
-        $query=$conn->query("INSERT INTO usertable(name,email,password)VALUES('$name','$username','$password')");
-        $query=""INSERT INTO usertable(name,email,password)VALUES(?,?,?)";
+        //$query=$conn->query("INSERT INTO usertable(name,email,password)VALUES('$name','$username','$password')");
+        $query="INSERT INTO usertable(name,email,password)VALUES(?,?,?)";
         $smt=$conn->prepare($query);
         $result->$smt->execute([$name,$username,$password]);
        //$query=$conn->query("INSERT INTO usertable(name,email,password)VALUES('$name','$username','$password')");
